@@ -1,0 +1,172 @@
+.container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.mat-typography{
+    margin: 0;
+}
+.containerTitle {
+    padding-left: 20px;
+}
+
+.containerItems {
+    margin-top: 9px;
+    margin-left: -12px;
+}
+
+.itemsMenu {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.items {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.imageLogo {
+    width: 172px;
+    height: 28px;
+    overflow: clip;
+}
+
+.subMenus {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.buttonsMenu {
+    display: flex;
+    max-width: 768px;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: end;
+}
+
+.buttonLink {
+    line-height: 16px;
+    font-family: "Hind Vadodara", sans-serif;
+    font-size: 13px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 12px;
+    color: rgba(0, 0, 24, 0.718) !important;
+}
+
+.buttonBorder {
+    max-width: 136px;
+    width: 100%;
+}
+
+.buttonPrimary {
+    height: 35px;
+    align-content: center;
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(233, 0, 102);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 12px;
+    font-size: 14px;
+    color: rgb(233, 0, 102) !important;
+    background-color: white;
+    text-decoration: none;
+    outline: transparent solid 1px;
+    box-sizing: border-box;
+}
+
+.buttonSecondary {
+    height: 35px;
+    align-content: center;
+    margin: 0px;
+    position: relative;
+    border: 1px solid rgb(233, 0, 102);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 12px;
+    font-size: 14px;
+    max-height: 100vh;
+    width: 100%;
+    color: white !important;
+    background-color: rgb(233, 0, 102);
+    text-decoration: none;
+    outline: transparent solid 1px;
+    box-sizing: border-box;
+}
+
+.bodyContent {
+    overflow: hidden auto;
+}
+
+.contentFooter {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+.containerFooter{
+    position: relative;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  scroll-behavior: smooth;
+  flex-basis: 0px;
+  -moz-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.footer{
+    width: 100%;
+  background-color: white;
+  text-align: center;
+}
+.containerSocial{
+    display: flex;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.contentSocial{
+    position: relative;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  scroll-behavior: smooth;
+  flex-basis: 0px;
+  -moz-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.buttonSocial{
+    display: flex;
+  flex-direction: row;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  padding-top: 82px;
+  padding-bottom: 52px;
+}

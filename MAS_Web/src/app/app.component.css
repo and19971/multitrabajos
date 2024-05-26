@@ -1,0 +1,119 @@
+.containerImage {
+    width: 1920px;
+    background-image: url("https://www.multitrabajos.com/company/static/media/bumi-desktop.8675eb37.png");
+    background-position: center center;
+    width: 100%;
+    height: 570px;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: start;
+    -moz-box-align: center;
+    align-items: center;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+.subtitle{
+    margin-top: -3rem;
+    width: 536px;
+    text-align: start;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 80px;
+    text-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+    color: var(--white-100,#fff);
+  font-family: "Hind Vadodara", sans-serif;
+  font-style: normal;
+}
+.contentCaroussel {
+    width: 50%;
+    height: 90%;
+    background-color: initial;
+    padding: 60px;
+    gap: 24px;
+    position: initial;
+    -moz-box-pack: center;
+    justify-content: start;
+    -moz-box-align: start;
+    align-items: start;
+    animation: 1s ease-in-out forwards;
+}
+
+.titleJobi {
+    margin-top: 3rem;
+    width: 560px;
+    min-height: 200px;
+    text-align: start;
+    text-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+    font-size: 70px;
+    letter-spacing: -2.8px;
+    height: 56px;
+    font-style: normal;
+    display: flex;
+    font-family: "Hind Vadodara", sans-serif;
+    font-weight: 700;
+    line-height: 75px;
+    color: var(--white-100, #fff);
+    text-align: left;
+}
+.buttonCarousel{
+    
+    position: relative;
+    border: 1px solid rgb(233, 0, 102);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 12px;
+    font-size: 16px;
+    line-height: 46px;
+    height: auto;
+    width: auto;
+    font-family: "Hind Vadodara", sans-serif;
+    color: white;
+    background-color: rgb(233, 0, 102);
+    text-decoration: none;
+    outline: transparent solid 1px;
+    cursor: pointer;
+    margin-top: 0px;
+    width: 160px;
+}
+.reproductor{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+.buttonReproductor{
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    top: 430px;
+    background-color: white;
+    height: 32px;
+    border-radius: 100px;
+}
+.buttonPause{
+    display: flex;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.iconPause{
+   margin-top: .3rem;
+   color: blue;
+   margin-left: .5rem;
+   margin-right: .5rem;
+   width: 1.2rem;
+   height: 2rem;
+}
+

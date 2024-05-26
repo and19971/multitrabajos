@@ -1,0 +1,7 @@
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\bin\Debug\mas_data.dll.config
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\bin\Debug\mas_data.dll
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\bin\Debug\mas_data.pdb
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\obj\Debug\mas_data.csproj.AssemblyReference.cache
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\obj\Debug\mas_data.csproj.CoreCompileInputs.cache
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\obj\Debug\mas_data.dll
+C:\Repo_Git\Mas_Trabajo\mas_trabajo\MAS_Services\mas_services\mas_data\obj\Debug\mas_data.pdb

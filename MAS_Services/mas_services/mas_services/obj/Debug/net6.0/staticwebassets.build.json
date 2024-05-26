@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lNmY3r3L8GNkIpem+5AHDxiJwhjPHvspb5C/6C7yWsY=",
+  "Source": "mas_services",
+  "BasePath": "_content/mas_services",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

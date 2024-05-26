@@ -1,0 +1,68 @@
+<footer class="footer">
+    <div class="containerSocial">
+        <div class="contentSocial">
+            <div class="buttonSocial">
+                <a class="socialLink"> <img
+                        src="https://www.multitrabajos.com/company/static/media/facebook.9becac13.svg"></a>
+                <a class="socialLink"> <img
+                        src="https://www.multitrabajos.com/company/static/media/twitter.1f599dd1.svg"></a>
+                <a class="socialLink"> <img
+                        src="https://www.multitrabajos.com/company/static/media/instagram.1da204bc.svg"></a>
+                <a class="socialLink"> <img
+                        src="https://www.multitrabajos.com/company/static/media/linkedin.59d08a2f.svg"></a>
+                <a class="socialLink"><img
+                        src="https://www.multitrabajos.com/company/static/media/youtube.2632836b.svg"></a>
+            </div>
+        </div>
+        <hr>
+        <div class="information">
+            <div class="firstContent">
+                Por temas de atención al cliente o para ventas comunicarse al
+                <strong class="strong">+593 025000069</strong>
+            </div>
+            <div class="firstContent">
+                Ventas
+                <strong class="strong">ventas-ecmultitrabajos.com</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="information">
+            <span class="buttonsFooter">
+                <span class="textButton">
+                    <h4 class="text">Términos y Condiciones</h4>
+                </span>
+            </span>
+            <span class="buttonsFooter">
+                <span class="textButton">
+                    <h4 class="text">Política de Privacidad</h4>
+                </span>
+            </span>
+            <span class="buttonsFooter">
+                <span class="textButtonFinal">
+                    <h4 class="text">Condiciones de contratación</h4>
+                </span>
+            </span>
+        </div>
+        <hr>
+        <div class="lastContainer">
+            <div class="countryContainer">
+                <mat-select placeholder="Selecciona tú país"  >
+                    <mat-option *ngFor="let country of data" [value]="country.name.common">
+                        <img width="30px" src="{{country.flags.png}}">
+                        {{country.name.common}}
+                    </mat-option>
+                  </mat-select>
+            </div>
+            <div class="informationButton">
+                <div class="textInformation">
+                    <a class="LastButton">
+                        <img  class="imageFooter" src="https://www.multitrabajos.com/company/static/media/jobint.ce607e23.svg">
+                    </a>
+                    <span>
+                        © Copyright 1999-2024 Jobint
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

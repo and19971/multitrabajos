@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MAS_TRABAJO" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=MAS_TRABAJO;Integrated Security=True" SettingsObjectName="mas_data.Properties.Settings" SettingsPropertyName="MAS_TRABAJOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MAS_COMPANY" Member="MAS_COMPANY">
+    <Type Name="MAS_COMPANY">
+      <Column Name="COM_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="COM_COMPANY_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_BUSINESS_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_ADDRESS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="COM_PHONE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="COM_FK_TYPE_INDUSTRY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COM_QUANTITY_EMPLOYEES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COM_FK_PERSON_COMPANY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COM_STATE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MAS_PERSON_COMPANY_MAS_COMPANY" Member="MAS_PERSON_COMPANY" ThisKey="COM_FK_PERSON_COMPANY" OtherKey="PER_ID" Type="MAS_PERSON_COMPANY" IsForeignKey="true" />
+      <Association Name="MAS_TYPE_INDUSTRY_MAS_COMPANY" Member="MAS_TYPE_INDUSTRY" ThisKey="COM_FK_TYPE_INDUSTRY" OtherKey="TYP_ID" Type="MAS_TYPE_INDUSTRY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_PERSON_COMPANY" Member="MAS_PERSON_COMPANY">
+    <Type Name="MAS_PERSON_COMPANY">
+      <Column Name="PER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PER_FIRST_NAME" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PER_SECOND_NAME" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PER_LAST_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PER_SUR_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PER_FK_TYPE_IDENTIFICATION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PER_NUMBER_IDENTIFICATION" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PER_FK_POSITION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PER_STATE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MAS_PERSON_COMPANY_MAS_COMPANY" Member="MAS_COMPANY" ThisKey="PER_ID" OtherKey="COM_FK_PERSON_COMPANY" Type="MAS_COMPANY" />
+      <Association Name="MAS_PERSON_COMPANY_MAS_USER_COMPANY" Member="MAS_USER_COMPANY" ThisKey="PER_ID" OtherKey="USE_FK_PERSON_COMPANY" Type="MAS_USER_COMPANY" />
+      <Association Name="MAS_POSITION_MAS_PERSON_COMPANY" Member="MAS_POSITION" ThisKey="PER_FK_POSITION" OtherKey="POS_ID" Type="MAS_POSITION" IsForeignKey="true" />
+      <Association Name="MAS_TYPE_IDENTIFICATION_MAS_PERSON_COMPANY" Member="MAS_TYPE_IDENTIFICATION" ThisKey="PER_FK_TYPE_IDENTIFICATION" OtherKey="TYP_ID" Type="MAS_TYPE_IDENTIFICATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_PERSON_POSTULANT" Member="MAS_PERSON_POSTULANT">
+    <Type Name="MAS_PERSON_POSTULANT">
+      <Column Name="PER_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PER_FIRST_NAME" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PER_SECOND_NAME" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PER_LAST_NAME" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PER_SUR_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PER_FK_TYPE_IDENTIFICATION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PER_NUMBER_IDENTIFICATION" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PER_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MAS_PERSON_POSTULANT_MAS_USER_POSTULANT" Member="MAS_USER_POSTULANT" ThisKey="PER_ID" OtherKey="USE_FK_PERSON_POSTULANT" Type="MAS_USER_POSTULANT" />
+      <Association Name="MAS_TYPE_IDENTIFICATION_MAS_PERSON_POSTULANT" Member="MAS_TYPE_IDENTIFICATION" ThisKey="PER_FK_TYPE_IDENTIFICATION" OtherKey="TYP_ID" Type="MAS_TYPE_IDENTIFICATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_POSITION" Member="MAS_POSITION">
+    <Type Name="MAS_POSITION">
+      <Column Name="POS_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="POS_DESCRIPTION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="POS_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MAS_POSITION_MAS_PERSON_COMPANY" Member="MAS_PERSON_COMPANY" ThisKey="POS_ID" OtherKey="PER_FK_POSITION" Type="MAS_PERSON_COMPANY" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_TYPE_IDENTIFICATION" Member="MAS_TYPE_IDENTIFICATION">
+    <Type Name="MAS_TYPE_IDENTIFICATION">
+      <Column Name="TYP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYP_DESCRIPTION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TYP_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MAS_TYPE_IDENTIFICATION_MAS_PERSON_COMPANY" Member="MAS_PERSON_COMPANY" ThisKey="TYP_ID" OtherKey="PER_FK_TYPE_IDENTIFICATION" Type="MAS_PERSON_COMPANY" />
+      <Association Name="MAS_TYPE_IDENTIFICATION_MAS_PERSON_POSTULANT" Member="MAS_PERSON_POSTULANT" ThisKey="TYP_ID" OtherKey="PER_FK_TYPE_IDENTIFICATION" Type="MAS_PERSON_POSTULANT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_TYPE_INDUSTRY" Member="MAS_TYPE_INDUSTRY">
+    <Type Name="MAS_TYPE_INDUSTRY">
+      <Column Name="TYP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYP_DESCRIPTION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TYP_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MAS_TYPE_INDUSTRY_MAS_COMPANY" Member="MAS_COMPANY" ThisKey="TYP_ID" OtherKey="COM_FK_TYPE_INDUSTRY" Type="MAS_COMPANY" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_USER_COMPANY" Member="MAS_USER_COMPANY">
+    <Type Name="MAS_USER_COMPANY">
+      <Column Name="USE_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USE_EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="USE_PASSWORD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USE_ATTEMPTS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USE_LAST_PASSWORD_CHANGED" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="USE_PROFILE_PICTURE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USE_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USE_FK_PERSON_COMPANY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MAS_PERSON_COMPANY_MAS_USER_COMPANY" Member="MAS_PERSON_COMPANY" ThisKey="USE_FK_PERSON_COMPANY" OtherKey="PER_ID" Type="MAS_PERSON_COMPANY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAS_USER_POSTULANT" Member="MAS_USER_POSTULANT">
+    <Type Name="MAS_USER_POSTULANT">
+      <Column Name="USE_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USE_EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="USE_PASSWORD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USE_ATTEMPTS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USE_PASSWORD_CHANGED" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="USE_PROFILE_PICTURE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="USE_STATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USE_FK_PERSON_POSTULANT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MAS_PERSON_POSTULANT_MAS_USER_POSTULANT" Member="MAS_PERSON_POSTULANT" ThisKey="USE_FK_PERSON_POSTULANT" OtherKey="PER_ID" Type="MAS_PERSON_POSTULANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,36 @@
+<div class="containerImage" [ngStyle]="{'background-image': 'url(' + currentImage + ')'}">
+  <div class="contentCaroussel">
+    <h1 class="titleJobi">¡Te presentamos a Jobi!</h1>
+    <h3 class="subtitle">El asistente virtual que acompañará a tu empresa en los diferentes procesos de reclutamiento
+      incorporando lo mejor de la Inteligencia artificial.</h3>
+    <button class="buttonCarousel">Conoce más</button>
+  </div>
+</div>
+<div class="reproductor">
+  <div class="buttonReproductor">
+    <div class="buttonPause">
+      <div class="iconPause">
+        <mat-icon *ngIf="!isPaused" (click)="paused()">paused</mat-icon>
+        <mat-icon *ngIf="isPaused" (click)="paused()">play_arrow</mat-icon>
+      </div>
+      <div class="iconPause">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </div>
+      <div class="iconPause">
+        <mat-icon>fiber_manual_record</mat-icon>
+      </div>
+      <div class="iconPause">
+        <mat-icon>fiber_manual_record</mat-icon>
+      </div>
+      <div class="iconPause">
+      <mat-icon>fiber_manual_record</mat-icon>
+      </div>
+      <div class="iconPause">
+        <mat-icon>fiber_manual_record</mat-icon>
+      </div>
+      <div class="iconPause">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

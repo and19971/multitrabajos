@@ -1,0 +1,146 @@
+.socialLink {
+    margin: 0px 12px 0px 0px;
+    color: rgb(0, 13, 241);
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.divisor {
+    content: "";
+    position: relative;
+}
+
+.divisor::after {
+
+    width: calc(100% - 32px);
+    max-width: 1156px;
+    height: 1px;
+    background-color: rgba(0, 0, 24, 0.08);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.information {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 42px 0px;
+}
+
+.firstContent {
+    padding: 13px 0px;
+    font-size: 15px;
+    line-height: 28px;
+    margin-right: 3rem;
+    font-family: "Hind Vadodara", sans-serif;
+}
+
+.strong {
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 28px;
+
+}
+
+hr {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.buttonsFooter {
+    padding-right: 14px;
+    position: relative;
+}
+
+.textButton {
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    line-height: 34px;
+    color: rgba(0, 0, 24, 0.6) !important;
+    padding: 0px;
+    transition: color 0.3s ease-in-out;
+    border: medium;
+}
+
+.textButton::after {
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: rgba(0, 0, 24, 0.6);
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    transform: translate(-50%);
+}
+
+.textButtonFinal {
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    line-height: 34px;
+    color: rgba(0, 0, 24, 0.6) !important;
+    padding: 0px;
+    transition: color 0.3s ease-in-out;
+    border: medium;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.lastContainer {
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 48px 0px;
+    display: flex;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.countryContainer {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 0px;
+    width: 200px;
+    background: transparent;
+}
+
+.informationButton {
+    justify-content: left;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+}
+
+.textInformation {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: rgba(0, 0, 24, 0.84);
+
+}
+
+.lastButton {
+    color: rgb(0, 13, 241);
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+.imageFooter {
+    vertical-align: middle;
+    border-style: none;
+}
